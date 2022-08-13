@@ -31,7 +31,7 @@ public class UserFacade {
             //Checking params
             if (userId.isEmpty())
                 throw new InvalidParamException();
-            //Check user
+            //Checking user
             User user = userService.getUserById(userId);
             if (user == null)
                 throw new UserNotFoundException();
@@ -54,13 +54,11 @@ public class UserFacade {
             if (model == null || model.getUserId().isEmpty() ||
                     model.getName().isEmpty() || model.getUsername().isEmpty())
                 throw new InvalidParamException();
-            //Checking
-            if (!model.getUserId().isEmpty()) {
-                User existUser = userService.getUserById(model.getUserId());
-                if (existUser != null)
-                    throw new UserAlreadyExistException();
-            }
-            //Mapping model
+            //Checking if user is already exist
+            User existUser = userService.getUserById(model.getUserId());
+            if (existUser != null)
+                throw new UserAlreadyExistException();
+            //Mapping model UserModel -> User
             User user = new ModelMapper().map(model, User.class);
             return userService.saveUser(user);
         } catch (ArchitectureException exception) {
