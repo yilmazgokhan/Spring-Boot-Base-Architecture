@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.5.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>com.yilmazgokhan</groupId>
     <artifactId>architecture</artifactId>
@@ -31,10 +31,10 @@
             <artifactId>javax.persistence-api</artifactId>
         </dependency>
 
-        <!--region MySql -->
+        <!--region H2 Database -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
         <!--endregion -->
@@ -50,7 +50,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>1.18.24</version>
         </dependency>
         <!--endregion -->
 
