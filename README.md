@@ -78,6 +78,32 @@ API tests with **200 OK** and **404 Not Found** (**_Custom Exception_**) codes a
 
 <img src="/screenshots/get_user_fail.png" />
 
+## Test For Local
+
+- Clone or download the application to your computer.
+
+- Go to the folder where the application is located via terminal.
+
+- Before testing, please make sure Docker is installed on your local computer.
+
+- Then run the application with the `make` command. Make sure you have the `make` installed on your computer. If `make` is not installed on your computer, you can find detailed information [here](https://www.gnu.org/software/make/).
+
+- Now you can test the application on your own computer.
+
+### If you want to run the make commands in order, you can run them in the following order.
+
+```sh
+make clean
+```
+
+```sh
+make image
+```
+
+```sh
+make run
+```
+
 ## References
 
 - [Spring Boot](https://spring.io/projects/spring-boot)
